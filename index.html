@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <title>Youtube Clone</title>
+    
+</head>
+<body>
+    <div class="wrapper">
+
+        <!--header-start-->
+        <header>
+            <div class="images">
+                <button class="openbtn" onclick="toggleNav()"><img src="images\header\menu.svg" class="menu_icon"></button>
+                <img src="images\header\Youtube.svg" class="youtube_icon" title="Youtube Home">                
+            </div>
+            
+            <div class="search_Div">
+                <input type="search" placeholder="Search"><button type="submit" class="search_button"><img class="search_icon" src="images\header\search.svg"></button>
+            </div>
+
+            <div class="header_icons">
+                <button id="record_video_icon"><img class="header_icons_nav" src="images\header\record video.svg"></button>
+                <button id="youtube_apps_icon"><img class="header_icons_nav" src="images\header\youtube apps.svg"></button>
+                <button id="notifications_icon"><img class="header_icons_nav" src="images\header\notifications.svg" ></button>
+                <img class="header_icons_profile_icon" src="/images/profile.png">
+            </div>
+
+        </header>
+
+        <!--sidebar-start-->
+        <sidebar  class="sidebar" id="mySidebarMain">
+            <!--sidebar-active-->
+           <div id="mySidebarActive" class="sidebarActiveDiv">
+            <ul class="sidebarActiveUl">
+               <li title="Home"><a href="#"><img src="images\sidebar\home.svg" class="sidebarActiveIcon" ><p>Home</p></a></li>
+               <li title="Trending"><a href="#"><img src="images\sidebar\trending.svg" class="sidebarActiveIcon" ><p>Trending</p></a></li>
+               <li title="Subscriptions"><a href="#"><img src="images\sidebar\subscriptions.svg" class="sidebarActiveIcon"><p>Subscriptions</p></a></li>
+           </ul>
+           <hr class="sidebarActiveHr">
+           <ul class="sidebarActiveUl">
+               <li title="Library"><a href="#"><img src="images\sidebar\library.svg" class="sidebarActiveIcon"><p>Library</p></a></li>
+               <li title="History"><a href="#"><img src="images\sidebar\history.svg" class="sidebarActiveIcon"><p>History</p></a></li>
+               <li title="Watch Later"><a href="#"><img src="images\sidebar\watch later.svg" class="sidebarActiveIcon"><p>Watch Later</p></a></li>
+               <li title="Liked Videos"><a href="#"><img src="images\sidebar\liked videos.svg" class="sidebarActiveIcon"><p>Liked Videos</p></a></li>
+            </ul>
+            <hr class="sidebarActiveHr">
+            <h3 class="sidebarActiveH3">Subscriptions</h3>
+            <ul class="sidebarActiveUl">
+                <li title="Channel"><a href="#"><img class="sidebarActiveChannelIcon" src="/images/profile.png"><p>Channel</p></a></li>
+                <li title="Channel"><a href="#"><img class="sidebarActiveChannelIcon" src="/images/profile.png"><p>Channel</p></a></li>
+                <li title="Channel"><a href="#"><img class="sidebarActiveChannelIcon" src="/images/profile.png"><p>Channel</p></a></li>
+                <li title="Channel"><a href="#"><img class="sidebarActiveChannelIcon" src="/images/profile.png"><p>Channel</p></a></li>
+                <li title="Channel"><a href="#"><img class="sidebarActiveChannelIcon" src="/images/profile.png"><p>Channel</p></a></li>
+                <li title="Channel"><a href="#"><img class="sidebarActiveChannelIcon" src="/images/profile.png"><p>Channel</p></a></li>
+            </ul>
+            <hr class="sidebarActiveHr">
+            <h3 class="sidebarActiveH3">More From Youtube</h3>
+            <ul class="sidebarActiveUl">
+                <li title="Youtube Premium"><a href="#"><img src="images\sidebar\youtube_premium.svg" class="sidebarActiveIcon"><p>YouTube Premium</p></a></li>
+                <li title="Movies and Shows"><a href="#"><img src="images\sidebar\movies and shows.svg" class="sidebarActiveIcon"><p>Movies and Shows</p></a></li>
+                <li title="Gaming"><a href="#"><img src="images\sidebar\gaming.svg" class="sidebarActiveIcon"><p>Gaming</p></a></li>
+                <li title="Live"><a href="#"><img src="images\sidebar\live.svg" class="sidebarActiveIcon"><p>Live</p></a></li>
+                <li title="Fashion"><a href="#"><img src="images\sidebar\fashion.svg" class="sidebarActiveIcon"><p>Fashion</p></a></li>
+            </ul>
+            <hr class="sidebarActiveHr">
+            <ul class="sidebarActiveUl">
+                <li title="Settings"><a href="#"><img src="images\sidebar\settings.svg" class="sidebarActiveIcon"><p>Settings</p></a></li>
+                <li title="Report History"><a href="#"><img src="images\sidebar\report history.svg" class="sidebarActiveIcon"><p>Report History</p></a></li>
+                <li title="Help"><a href="#"><img src="images\sidebar\help.svg" class="sidebarActiveIcon"><p>Help</p></a></li>
+                <li title="Send Feedback"><a href="#"><img src="images\sidebar\feedback.svg" class="sidebarActiveIcon"><p>Send Feedback</p></a></li>
+            </ul>
+            <hr class="sidebarActiveHr">
+           </div>
+
+           <!--sidebar-not-active-->
+           <div class="sidebarNotActiveDiv" id="mySidebarNotActive">
+                <ul class="sidebarNotActiveUl">
+                    <li title="Home"><img src="images\sidebar\home.svg" class="sidebarNotActiveIcon"><p>Home</p></li>
+                    <li title="Trending"><img src="images\sidebar\trending.svg" class="sidebarNotActiveIcon"><p>Trending</p></li>
+                    <li title="Subscriptions"><img src="images\sidebar\subscriptions.svg" class="sidebarNotActiveIcon"><p>Subscriptions</p></li>
+                    <li title="Library"><img src="images\sidebar\library.svg" class="sidebarNotActiveIcon"><p>Library</p></li>
+                </ul>
+           </div>
+
+        </sidebar>
+
+        <!--recommended-start-->
+        <section class="main" id="myMain">
+            <ad>Ad</ad>
+            <h1>Recommended</h1>
+            <!--video box starts-->
+            <div class="video_box">
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+                <div class="video_box_item">
+                    <img src="images/thumbnail.png" class="thumbnail">
+                    <div>
+                        <img class="video_box_profile_icon" src="/images/profile.png">
+                    <ul class="video_box_list">
+                        <li><h2>Title</h2></li>
+                        <li><p>Author Channel</p></li>
+                        <li><p>Views • Ago</p></li>
+                    </ul></div>
+                </div>
+            </div>
+            <!--video box ends-->
+        </section>
+
+    </div>
+    <!--wrapper ends-->
+    <script>
+        function toggleNav() {
+            var element = document.getElementById("mySidebarActive");
+            var element_2 = document.getElementById("mySidebarNotActive");
+            var element_3 = document.getElementById("mySidebarMain");
+            var element_4 = document.getElementById("myMain");
+            if (element.style.display == "block") {
+                element.style.display = "none",
+                element_3.style.width = "70px",
+                element_4.style.marginLeft = "0px",
+                element_2.style.display = "block";                
+            } else {
+                element_3.style.width = "240px",
+                element.style.display = "block",
+                element_4.style.marginLeft = "170px",
+                element_2.style.display = "none";                
+            }
+        };
+    </script>
+</body>
+</html>
